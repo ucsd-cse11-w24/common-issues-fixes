@@ -1,8 +1,18 @@
-# common-issues-fixes
+# CSE 8B & CSE 11: Common Issues
 A list of common issues students in CSE 8B/11 are encountering and how to fix them. 
 
 ## Table of Contents
-TBD
+- [CSE 8B & CSE 11: Common Issues](#cse-8b-cse-11-common-issues)
+   * [Table of Contents](#table-of-contents)
+   * [General Logistics](#general-logistics)
+   * [(Run Script) Misc: "A terminally deprecated method in java.lang.System has been called"](#run-script-misc-a-terminally-deprecated-method-in-javalangsystem-has-been-called)
+   * [(Run Script) Problem: "The XXXXX class could not be found."](#run-script-problem-the-xxxxx-class-could-not-be-found)
+   * [(Run Script) Problem: ./run Not Found](#run-script-problem-run-not-found)
+   * [(Gradescope) Problem: Gradescope is Complaining](#gradescope-problem-gradescope-is-complaining)
+   * [(VSCode) Problem: "The import tester cannot be resolved"](#vscode-problem-the-import-tester-cannot-be-resolved)
+   * [(In Terminal) Error: error: package tester does not exist](#in-terminal-error-error-package-tester-does-not-exist)
+   * [(VSCode) Misc: Unused "import tester.*" Line](#vscode-misc-unused-import-tester-line)
+
 
 ## General Logistics
 
