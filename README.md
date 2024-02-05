@@ -335,6 +335,8 @@ If you're getting this error, one possible reason is that you have print stateme
 - While you are allowed to use print statements to help debug your code, keep in mind that it will break the autograder if you leave it there. 
 - You'll need to either remove any print statements, or comment them out, prior to submission.
 
+Something else to consider: if you've been using the `main` method, when the programming assignment didn't tell you to use a `main` method, then you should not use the `main` method. Use the `run` script to run your code.
+
 ---
 
 </details>
@@ -372,6 +374,41 @@ You can tell VSCode to recognize the `tester` import by following these steps:
 
 </details>
 
+## (In Terminal) Error: error: package tester does not exist
+If you're getting an error similar to this one:
+```
+ExampleVideos.java:1: error: package tester does not exist
+import tester.*;
+^
+1 error
+```
+
+<details>
+<summary>Check: Using Run Script</summary>
+<br> 
+
+Make sure you're using the `run` script that came with the programming assignment. You may be getting this error if you're using `javac`. 
+
+> [!NOTE]
+> If the assignment requires you to use `javac`, then you can also remove the `import tester.*` line.
+
+---
+
+</details>
+
+<details>
+<summary>Check: tester.jar Exists</summary>
+<br> 
+
+Make sure there's a `lib` folder in the directory your terminal is in, and further make sure there's a `tester.jar` file in the `lib` folder.
+
+If you have a `tester.jar` file in your current directory, but there's no `lib` folder, create a `lib` folder and put the `tester.jar` file in the `lib` folder. 
+
+If this is not the case, you probably need to download the starter code again.
+
+---
+
+</details>
 
 ## (VSCode) Misc: Unused "import tester.*" Line
 
