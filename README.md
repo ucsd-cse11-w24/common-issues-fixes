@@ -7,6 +7,7 @@ A list of common issues students in CSE 8B/11 are encountering and how to fix th
    * [General Logistics](#general-logistics)
    * [(Run Script) Misc: "A terminally deprecated method in java.lang.System has been called"](#run-script-misc-a-terminally-deprecated-method-in-javalangsystem-has-been-called)
    * [(Run Script) Problem: "The XXXXX class could not be found."](#run-script-problem-the-xxxxx-class-could-not-be-found)
+   * [(Run Script) Problem: "The XXXXX class could not be instantiated. ](#run-script-problem-the-xxxxx-class-could-not-be-instantiated)
    * [(Run Script) Problem: ./run Not Found](#run-script-problem-run-not-found)
    * [(Gradescope) Problem: Gradescope is Complaining](#gradescope-problem-gradescope-is-complaining)
    * [(VSCode) Problem: "The import tester cannot be resolved"](#vscode-problem-the-import-tester-cannot-be-resolved)
@@ -167,6 +168,79 @@ Due to a limitation with the way the `run` script works, any Java code that has 
 <br> 
 
 If the above solutions do not work, please make sure you **saved** your file.
+
+---
+
+</details>
+
+
+
+## (Run Script) Problem: "The XXXXX class could not be instantiated. 
+If you're getting an error that looks like
+```
+Exception in thread "main" java.lang.RuntimeException: The ExampleVideos class could not be instantiated.
+```
+
+
+<details>
+<summary>Check: Constructor</summary>
+<br> 
+
+Make sure the class you're trying to run does _not_ have a constructor with one or more parameters. 
+
+The error message should also include that hint, e.g.,
+
+```
+Please make sure that your examples class has a default constructor (with no arguments) that does not fail during instantiation.
+```
+
+---
+
+</details>
+
+
+<details>
+<summary>Check: Possible Errors in Constructor</summary>
+<br> 
+
+If you're performing any operations in the constructor that could possibly result in an exception being thrown, ensure the exception _never_ occurs (e.g., add additional logic to your constructor to prevent any exceptions or, as a quick fix, you can use `try`/`catch`).
+
+The error message should also include that hint, e.g.,
+
+```
+Please make sure that your examples class has a default constructor (with no arguments) that does not fail during instantiation.
+```
+
+---
+
+</details>
+
+
+<details>
+<summary>Check: Class Name Case Sensitivity</summary>
+<br> 
+
+If your error message does not include any additional helpful information, e.g., you're getting something like
+
+![](assets/runCmdCouldNotBeInstantiated.png)
+
+Then, check the class name that you're providing after the `run` command. In particular, when you're using the `run` command, make sure what you're putting into the `run` command has the same case sensitivity and spelling as the class definition. 
+
+
+For example, if you have the class, 
+
+```java
+class HelloWorld {
+    // ...
+}
+```
+
+Then, you must run the command as `./run HelloWorld`. 
+
+You will get the error if you pass in a class name with the correct spelling but incorrect case sensitivity, e.g.,
+- `./run Helloworld`
+- `./run HELLOWORLD`
+- `./run helloworld`
 
 ---
 
