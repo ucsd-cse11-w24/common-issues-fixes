@@ -9,6 +9,7 @@ A list of common issues students in CSE 8B/11 are encountering and how to fix th
    * [(Run Script) Problem: "The XXXXX class could not be found."](#run-script-problem-the-xxxxx-class-could-not-be-found)
    * [(Run Script) Problem: "The XXXXX class could not be instantiated. ](#run-script-problem-the-xxxxx-class-could-not-be-instantiated)
    * [(Run Script) Problem: ./run Not Found](#run-script-problem-run-not-found)
+   * [(Run Script) Problem: ./run: Permission denied](#run-script-problem-run-permission-denied)
    * [(Gradescope) Problem: Gradescope is Complaining](#gradescope-problem-gradescope-is-complaining)
    * [(VSCode) Problem: "The import tester cannot be resolved"](#vscode-problem-the-import-tester-cannot-be-resolved)
    * [(In Terminal) Error: error: package tester does not exist](#in-terminal-error-error-package-tester-does-not-exist)
@@ -339,6 +340,32 @@ To see how you can use these commands to navigate to the right directory:
 
 </details>
 
+
+
+## (Run Script) Problem: ./run: Permission denied
+
+For example, when you try to run a class, you're getting an error that looks like:
+```
+$ ./run CompileTimeErrors
+-bash: ./run: Permission denied
+```
+
+<details>
+<summary>Solution: Give Permission</summary>
+<br> 
+
+To solve this issue, run the following command first:
+
+```
+chmod u+x run
+```
+
+before using the `run` command.
+
+
+---
+
+</details>
 
 ## (Gradescope) Problem: Gradescope is Complaining
 
